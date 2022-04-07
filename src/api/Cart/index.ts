@@ -92,13 +92,11 @@ export class SaleorCartAPI extends ErrorListener {
 
     // 2. save online if possible (if checkout id available)
     if (this.saleorState.checkout?.lines) {
-      const {
-        data,
-        error,
-      } = await this.apolloClientManager.getRefreshedCheckoutLines(
-        this.saleorState.checkout.lines,
-        this.config.channel
-      );
+      const { data, error } =
+        await this.apolloClientManager.getRefreshedCheckoutLines(
+          this.saleorState.checkout.lines,
+          this.config.channel
+        );
 
       if (error) {
         this.fireError(error, ErrorCartTypes.SET_CART_ITEM);
@@ -125,13 +123,11 @@ export class SaleorCartAPI extends ErrorListener {
     this.localStorageManager.removeItemFromCart(variantId);
     // 2. save online if possible (if checkout id available)
     if (this.saleorState.checkout?.lines) {
-      const {
-        data,
-        error,
-      } = await this.apolloClientManager.getRefreshedCheckoutLines(
-        this.saleorState.checkout.lines,
-        this.config.channel
-      );
+      const { data, error } =
+        await this.apolloClientManager.getRefreshedCheckoutLines(
+          this.saleorState.checkout.lines,
+          this.config.channel
+        );
 
       if (error) {
         this.fireError(error, ErrorCartTypes.SET_CART_ITEM);
@@ -159,13 +155,11 @@ export class SaleorCartAPI extends ErrorListener {
 
     // 2. save online if possible (if checkout id available)
     if (this.saleorState.checkout?.lines) {
-      const {
-        data,
-        error,
-      } = await this.apolloClientManager.getRefreshedCheckoutLines(
-        this.saleorState.checkout.lines,
-        this.config.channel
-      );
+      const { data, error } =
+        await this.apolloClientManager.getRefreshedCheckoutLines(
+          this.saleorState.checkout.lines,
+          this.config.channel
+        );
 
       if (error) {
         this.fireError(error, ErrorCartTypes.SET_CART_ITEM);
@@ -193,13 +187,11 @@ export class SaleorCartAPI extends ErrorListener {
 
     // 2. save online if possible (if checkout id available)
     if (this.saleorState.checkout?.lines) {
-      const {
-        data,
-        error,
-      } = await this.apolloClientManager.getRefreshedCheckoutLines(
-        this.saleorState.checkout.lines,
-        this.config.channel
-      );
+      const { data, error } =
+        await this.apolloClientManager.getRefreshedCheckoutLines(
+          this.saleorState.checkout.lines,
+          this.config.channel
+        );
 
       if (error) {
         this.fireError(error, ErrorCartTypes.SET_CART_ITEM);

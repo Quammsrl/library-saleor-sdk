@@ -55,7 +55,7 @@ export const productDetails = gql`
 `;
 
 export const variantsProducts = gql`
-  query VariantsProducts($ids: [ID], $channel: String) {
+  query VariantsProducts($ids: [ID!], $channel: String) {
     productVariants(ids: $ids, first: 100, channel: $channel) {
       edges {
         node {

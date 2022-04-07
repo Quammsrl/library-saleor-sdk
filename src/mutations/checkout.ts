@@ -11,7 +11,10 @@ import {
 export const updateCheckoutLineMutation = gql`
   ${checkoutFragment}
   ${checkoutErrorFragment}
-  mutation UpdateCheckoutLine($checkoutId: ID!, $lines: [CheckoutLineInput]!) {
+  mutation UpdateCheckoutLine(
+    $checkoutId: ID!
+    $lines: [CheckoutLineUpdateInput!]!
+  ) {
     checkoutLinesUpdate(checkoutId: $checkoutId, lines: $lines) {
       checkout {
         ...Checkout

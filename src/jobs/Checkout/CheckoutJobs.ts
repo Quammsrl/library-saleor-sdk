@@ -181,14 +181,12 @@ class CheckoutJobs extends JobsHandler<{}> {
   }: SetBillingAddressWithEmailJobInput): PromiseCheckoutJobRunResponse => {
     const checkout = LocalStorageHandler.getCheckout();
 
-    const {
-      data,
-      error,
-    } = await this.apolloClientManager.setBillingAddressWithEmail(
-      billingAddress,
-      email,
-      checkoutId
-    );
+    const { data, error } =
+      await this.apolloClientManager.setBillingAddressWithEmail(
+        billingAddress,
+        email,
+        checkoutId
+      );
 
     if (error) {
       return {
