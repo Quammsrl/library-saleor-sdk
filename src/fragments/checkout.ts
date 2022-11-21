@@ -23,6 +23,7 @@ export const checkoutAddressFragment = gql`
     streetAddress1
     streetAddress2
     city
+    cityArea
     postalCode
     country {
       code
@@ -30,8 +31,8 @@ export const checkoutAddressFragment = gql`
     }
     countryArea
     phone
-    isDefaultBillingAddress
     isDefaultShippingAddress
+    isDefaultBillingAddress
   }
 `;
 
